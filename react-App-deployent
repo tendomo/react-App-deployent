@@ -1,0 +1,16 @@
+#!/bin/bash
+#Description: A script to deploy a react App
+echo "workspace"
+cd workspace
+echo "cloning repo"
+git clone https://github.com/banlon-jones/emmy-coming-soon.git project
+echo "cd repo"
+cd project
+echo "npm install"
+npm i
+echo "npm test"
+npm run test
+echo "npm run build"
+npm run build
+echo "cp to home page"
+cp -r ./build/* /c/xampp/htdocs/allino
